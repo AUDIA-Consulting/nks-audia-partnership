@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AUDIA Consulting &amp; NKS Target Church Discovery Call Agenda</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-on-green-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800;900&family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --nks-red: #CC112C;
+      --nks-yellow: #FFB71B;
+      --nks-sky: #A6DCE7;
+      --nks-sky-soft: #EAF8FB;
+      --nks-cream: #FFF8EC;
+      --nks-charcoal: #3D4543;
+      --nks-charcoal-deep: #26302E;
+      --nks-line: #E8ECEB;
+      --white: #FFFFFF;
+      --gray-text: #55605E;
+      --muted-text: #74807D;
+      --border-color: var(--nks-line);
+      --soft-green: var(--nks-sky-soft);
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      font-family: "Source Sans 3", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 19px;
+      line-height: 1.66;
+      color: var(--nks-charcoal);
+      background:
+        linear-gradient(180deg, var(--nks-cream) 0%, #FFFFFF 320px, var(--nks-sky-soft) 100%);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: var(--white);
+      border-bottom: 6px solid var(--nks-red);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 2.75rem 6% 3rem;
+      text-align: center;
+    }
+
+    .cobrand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2.25rem;
+      flex-wrap: wrap;
+    }
+
+    .cobrand .nks-logo img {
+      width: min(420px, 70vw);
+      max-height: 132px;
+      object-fit: contain;
+    }
+
+    .cobrand .audia-logo img {
+      width: min(300px, 60vw);
+      max-height: 70px;
+      object-fit: contain;
+    }
+
+    .cobrand .divider {
+      width: 1px;
+      align-self: stretch;
+      min-height: 64px;
+      background: var(--nks-line);
+    }
+
+    .title-block {
+      text-align: center;
+      margin-top: 2.1rem;
+    }
+
+    .title-block h1 {
+      margin: 0;
+      font-family: "Source Sans Pro", "Source Sans 3", sans-serif;
+      font-size: 3.05rem;
+      font-weight: 900;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      color: var(--nks-charcoal);
+      line-height: 1.06;
+    }
+
+    .title-block p {
+      margin: 0.75rem 0 0;
+      color: var(--nks-red);
+      font-size: 1.28rem;
+      font-weight: 800;
+      text-transform: none;
+    }
+
+    .partner-strip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-top: 1.45rem;
+      padding: 0.6rem 1.15rem;
+      border: 1px solid var(--nks-line);
+      border-radius: 999px;
+      background: var(--nks-cream);
+      color: var(--nks-charcoal);
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .container {
+      width: min(94vw, 1180px);
+      max-width: 1180px;
+      margin: 3rem auto;
+      padding: 0;
+    }
+
+    .intro-card {
+      background: var(--white);
+      border-left: 6px solid var(--nks-red);
+      border-radius: 8px;
+      box-shadow: 0 12px 30px rgba(61,69,67,0.08);
+      padding: 2.6rem 3rem;
+      margin-bottom: 2.4rem;
+    }
+
+    .intro-card h2 {
+      margin: 0 0 0.75rem;
+      color: var(--nks-red);
+      font-size: 1.7rem;
+      font-weight: 900;
+    }
+
+    .intro-card p {
+      margin: 0 0 0.9rem;
+      color: var(--gray-text);
+    }
+
+    .intro-card p:last-child { margin-bottom: 0; }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.6rem;
+    }
+
+    .meta-item {
+      background: var(--nks-sky-soft);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 1.1rem 1.2rem;
+    }
+
+    .meta-label {
+      display: block;
+      color: var(--muted-text);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.15rem;
+    }
+
+    .meta-value {
+      font-weight: 700;
+      color: var(--nks-charcoal);
+      font-size: 1rem;
+    }
+
+    .roles {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 1rem;
+      margin-top: 1.6rem;
+    }
+
+    .role-card {
+      background: var(--nks-cream);
+      border: 1px solid var(--border-color);
+      border-top: 4px solid var(--nks-yellow);
+      border-radius: 6px;
+      padding: 1.15rem 1.25rem;
+    }
+
+    .role-card strong {
+      display: block;
+      color: var(--nks-charcoal);
+      font-size: 1.05rem;
+    }
+
+    .role-card .role-title {
+      color: var(--nks-red);
+      font-weight: 700;
+      font-size: 0.88rem;
+      margin: 0.1rem 0 0.45rem;
+    }
+
+    .role-card span.lens {
+      color: var(--gray-text);
+      font-size: 0.95rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      color: var(--white);
+      background: var(--nks-charcoal);
+      border-left: 8px solid var(--nks-yellow);
+      padding: 0.9rem 1.55rem;
+      border-radius: 6px;
+      margin: 3rem 0 1.45rem;
+      font-weight: 900;
+    }
+
+    .section-title .num {
+      color: var(--nks-yellow);
+      margin-right: 0.6rem;
+    }
+
+    .clause {
+      background: var(--white);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      box-shadow: 0 8px 20px rgba(61,69,67,0.055);
+      margin-bottom: 1.35rem;
+      padding: 1.9rem 2.25rem;
+      break-inside: avoid;
+    }
+
+    .clause h3 {
+      margin: 0 0 0.4rem;
+      color: var(--nks-charcoal);
+      font-size: 1.2rem;
+      font-weight: 900;
+    }
+
+    .clause .lead-in {
+      color: var(--gray-text);
+      margin: 0 0 0.9rem;
+      font-size: 1rem;
+    }
+
+    .clause ol, .clause ul {
+      margin: 0.25rem 0 0;
+      padding-left: 1.35rem;
+      color: var(--gray-text);
+    }
+
+    .clause li {
+      margin-bottom: 0.6rem;
+    }
+
+    .clause li:last-child { margin-bottom: 0; }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.18rem 0.6rem;
+      border-radius: 999px;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+    .tag-frank { background: #FCE3E7; color: var(--nks-red); }
+    .tag-mike { background: #FFF1D1; color: #9A6B00; }
+    .tag-jenn { background: #E1F2F7; color: #1F6B7D; }
+    .tag-all { background: #E7ECEA; color: var(--nks-charcoal); }
+
+    .highlight-box {
+      background: var(--soft-green);
+      border: 1px dashed var(--nks-red);
+      border-radius: 4px;
+      margin: 1rem 0 0;
+      padding: 1.1rem 1.25rem;
+      color: var(--nks-charcoal);
+      font-size: 0.98rem;
+    }
+
+    .highlight-box strong { color: var(--nks-red); }
+
+    .context-note {
+      background: var(--nks-sky-soft);
+      border-left: 4px solid var(--nks-sky);
+      border-radius: 4px;
+      padding: 0.75rem 1rem;
+      margin: 0 0 1rem;
+      color: var(--gray-text);
+      font-size: 0.92rem;
+    }
+
+    .legend {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-top: 1.4rem;
+      font-size: 0.9rem;
+      color: var(--gray-text);
+    }
+
+    .legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      color: var(--gray-text);
+      font-size: 0.95rem;
+      border-top: 1px solid var(--border-color);
+      background: var(--white);
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 820px) {
+      body { font-size: 17px; }
+      header { padding: 1.5rem 1.25rem; }
+      .cobrand { gap: 1.25rem; }
+      .cobrand .divider { display: none; }
+      .meta-grid, .roles { grid-template-columns: 1fr; }
+      .title-block h1 { font-size: 2rem; }
+      .container { margin: 2rem auto; width: min(92vw, 1180px); }
+      .intro-card, .clause { padding: 1.35rem; }
+    }
+
+    .part-banner {
+      background: var(--nks-red);
+      color: #fff;
+      border-radius: 8px;
+      padding: 1.2rem 1.7rem;
+      margin: 3.25rem 0 1.6rem;
+      box-shadow: 0 10px 24px rgba(204,17,44,0.18);
+    }
+    .part-banner .part-kicker {
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+    .part-banner h2 { margin: 0.2rem 0 0; font-size: 1.7rem; font-weight: 900; }
+    .part-banner p { margin: 0.45rem 0 0; font-size: 1rem; font-weight: 600; opacity: 0.96; }
+
+    .finding {
+      background: var(--white);
+      border: 1px solid var(--border-color);
+      border-left: 6px solid var(--nks-sky);
+      border-radius: 6px;
+      box-shadow: 0 8px 20px rgba(61,69,67,0.055);
+      margin-bottom: 1.35rem;
+      padding: 1.85rem 2.25rem;
+      break-inside: avoid;
+    }
+    .finding h3 { margin: 0 0 0.5rem; color: var(--nks-charcoal); font-size: 1.2rem; font-weight: 900; }
+    .finding p { margin: 0 0 0.7rem; color: var(--gray-text); }
+    .finding p:last-child { margin-bottom: 0; }
+    .finding ul { margin: 0.35rem 0 0.7rem; padding-left: 1.3rem; color: var(--gray-text); }
+    .finding li { margin-bottom: 0.5rem; }
+    .finding strong { color: var(--nks-charcoal); }
+
+    .pill {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.16rem 0.6rem;
+      border-radius: 999px;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+    .pill-priority { background: #FCE3E7; color: var(--nks-red); }
+    .pill-jenn { background: #E1F2F7; color: #1F6B7D; }
+
+    /* Hover focus effects: highlight a section when walking through it live */
+    .finding, .clause, .intro-card {
+      transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease, background-color 0.16s ease;
+    }
+    .finding:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 38px rgba(61,69,67,0.17);
+      border-left-color: var(--nks-red);
+      background: #FFFDF6;
+    }
+    .clause:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 38px rgba(61,69,67,0.17);
+      border-color: var(--nks-yellow);
+      background: #FFFDF6;
+    }
+    .intro-card:hover {
+      box-shadow: 0 18px 40px rgba(61,69,67,0.15);
+    }
+    .section-title {
+      transition: background-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
+    }
+    .section-title:hover {
+      background: var(--nks-red);
+      box-shadow: 0 12px 28px rgba(204,17,44,0.24);
+    }
+    .part-banner {
+      transition: transform 0.16s ease, box-shadow 0.16s ease;
+    }
+    .part-banner:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 34px rgba(204,17,44,0.26);
+    }
+
+    @media (hover: none) {
+      .finding:hover, .clause:hover, .intro-card:hover, .section-title:hover, .part-banner:hover {
+        transform: none;
+      }
+    }
+
+    @media print {
+      body { font-size: 11.5px; background: var(--white); }
+      header, .intro-card, .clause, .finding { box-shadow: none; }
+      .container { margin: 1.5rem auto; max-width: none; }
+      .section-title, .part-banner { break-after: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="cobrand">
+      <div class="nks-logo">
+        <img src="../assets/neighborhood-kids-schools-logo-wide.png" alt="Neighborhood Kids Schools logo">
+      </div>
+      <div class="divider"></div>
+      <div class="audia-logo">
+        <img src="../assets/audia-horizontal-full-color.svg" alt="AUDIA Consulting logo">
+      </div>
+    </div>
+    <div class="title-block">
+      <h1>Target Church Working Profile</h1>
+      <p>What We Have Established, and the Open Questions for the NKS &amp; AUDIA Consulting Church Referral Partnership</p>
+    </div>
+    <div class="partner-strip">
+      <span>A working document between Neighborhood Kids Schools and AUDIA Consulting</span>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <div class="intro-card">
+      <h2>Purpose of This Document</h2>
+      <p>Under our Strategic Church Referral Partnership, AUDIA Consulting sources, maps, and warmly introduces missionally aligned churches to NKS. The quality of those introductions depends on how precisely we understand the target, the <strong>golden example</strong>. This document now does two jobs. Part A captures everything NKS leadership established on the June 15 call so we have one shared picture of who we are looking for and why. Part B holds only the questions still open, organized for the June 16 follow-up so we capture the rest without retreading ground.</p>
+      <p>Jenn Rook is traveling on June 16, so the second call is with Frank and Mike. Per agreement we are keeping every open question in the flow. A few facility and director-specific items are flagged as ones Jenn can go deepest on, in case we want to carry those into a later session with her.</p>
+
+      <div class="meta-grid">
+        <div class="meta-item">
+          <span class="meta-label">Call 1</span>
+          <span class="meta-value">June 15, 2026 (complete)</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Call 2</span>
+          <span class="meta-value">June 16, 2026, 9:00 AM ET</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Facilitator</span>
+          <span class="meta-value">Brian Audia</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Updated</span>
+          <span class="meta-value">June 15, 2026</span>
+        </div>
+      </div>
+
+      <div class="roles">
+        <div class="role-card">
+          <strong>Frank Toral</strong>
+          <div class="role-title">Founder &amp; CEO, NKS</div>
+          <span class="lens">Vision, theology, relationships, and the strategic call on where to plant. Owns mission fit and the pastor relationship.</span>
+        </div>
+        <div class="role-card">
+          <strong>Mike Harper</strong>
+          <div class="role-title">Chief Operating Officer, NKS</div>
+          <span class="lens">Operations, unit economics, and scaling. Owns facility requirements, the CBRE demographic screen, and repeatable economics.</span>
+        </div>
+        <div class="role-card">
+          <strong>Jenn Rook</strong>
+          <div class="role-title">Director of Development &amp; Church Partnerships, NKS</div>
+          <span class="lens">Feasibility, site assessment, director recruiting, and launch. Opened 100 plus schools. Traveling on June 16.</span>
+        </div>
+      </div>
+
+      <div class="legend">
+        <span><span class="tag tag-frank">Frank</span> vision &amp; relationship</span>
+        <span><span class="tag tag-mike">Mike</span> operations &amp; economics</span>
+        <span><span class="tag tag-jenn">Jenn</span> feasibility &amp; launch</span>
+        <span><span class="tag tag-all">All</span> open to the room</span>
+        <span><span class="pill pill-priority">Priority</span> lead with these June 16</span>
+      </div>
+    </div>
+
+    <!-- ============ PART A ============ -->
+    <div class="part-banner">
+      <div class="part-kicker">Part A</div>
+      <h2>What We Have Established</h2>
+      <p>Captured from the June 15 call. This is the working target profile. Treat it as settled unless NKS revises it.</p>
+    </div>
+
+    <div class="finding">
+      <h3>The ideal church partner, three archetypes</h3>
+      <p>Frank, Mike, and Jenn converged on three profiles worth pursuing, in roughly this priority:</p>
+      <ul>
+        <li><strong>The network church.</strong> A large multi-site church in a major US city that overlaps a top childcare market (Dallas, Houston, Atlanta, Chicago and their affluent suburbs). The prize is that one church family can host five or more campuses across the city, a spiritual-impact multiplier and a built-in network rather than a one-off.</li>
+        <li><strong>The standalone flagship.</strong> A great church in a great market that can stand on its own. Mike's framing: with the right church, market, and director, a single campus can be a flagship even without a cluster.</li>
+        <li><strong>The influential church.</strong> A church whose name transcends geography (Frank cited the Gateway and Prestonwood tier). Landing an influential SBC or non-denominational church gives instant credibility across that denomination and can open the whole network.</li>
+      </ul>
+      <p>Frank's defining nuance: NKS wants <strong>a partner, not just another program of the church</strong>. The two gating questions are simply, do you have the space, and are you willing to embrace us as a partner.</p>
+    </div>
+
+    <div class="finding">
+      <h3>The capacity floor is 100 plus students</h3>
+      <p>This is the sharpest update from the call. The working floor is now <strong>100 plus student capacity</strong>, driven by NKS having investors. Frank was direct: Delray sits under 100 and he would not take a portfolio of sub-100 Delrays. He repeated "100 plus all day long." This is a meaningful relaxation from the 180 figure Brian worked with at Lionheart, and it confirms the 125-student standardized campus as the model while 100 is the minimum that still works. Churches below that bar generally should not get the conversation.</p>
+    </div>
+
+    <div class="finding">
+      <h3>Facility and demographic must-haves</h3>
+      <ul>
+        <li><strong>Roughly 10 plus classrooms</strong> with the right structural footprint.</li>
+        <li><strong>Passes the CBRE demographic screen.</strong> NKS runs every church through a CBRE demographic study tool that checks the market factors they care about. A church has to clear it.</li>
+        <li><strong>A pastoral team in the soul-saving business.</strong> NKS wants churches that genuinely need them as a mission, not a church that just has spare room. Growth-minded, community-minded, focused on the spiritual growth of kids, and thriving.</li>
+        <li><strong>Leadership readiness.</strong> Jenn's addition: a decisive pastor with an aligned board who sees the empty space, wants to convert it, and wants a real commitment rather than a meeting to check a box.</li>
+      </ul>
+    </div>
+
+    <div class="finding">
+      <h3>Markets and geography</h3>
+      <p>Target the <strong>top 30 to 50 childcare markets</strong> (Brian's "NFL cities," expanded). Clustering is ideal: open five to seven in a big city like Chicago so NKS can justify an area director, the hub-and-spoke model. One-off flagships are acceptable if the church can stand on its own. Scattering early is operationally fine. California needs extra market demand and higher income because the cost to operate is higher than Florida, so span of control matters. Influential and denominational flagships transcend geography and can jump the line.</p>
+    </div>
+
+    <div class="finding">
+      <h3>Golden example one: the Rebrand model, First Baptist Church of Delray Beach</h3>
+      <p>This is our current golden example for the <strong>Rebrand model</strong>, where NKS assumes the daily operations of a church's existing five-day day school and rebrands it under NKS. We deliberately avoid the word takeover, which carries negative connotations in the church world. The host church is <strong>First Baptist Church of Delray Beach</strong> (fbcdelray.com), a Southern Baptist church that has been a cornerstone of southern Palm Beach County for over seventy years, with a long-running school. The pastor, a former businessman and the local SBC leader, called Frank on a friend's referral and said he no longer wanted to run the school. It was <strong>plug and play</strong>: zoned, operational, and licensed, with B-plus facilities. Frank's decisive question was whether he had authority to make any leadership changes needed, and the pastor said yes. Because the school was already licensed, NKS got in for about <strong>$20,000</strong>, versus roughly ten times that to enter a non-licensed building today.</p>
+      <p>What made it work is one name: <strong>Enma Vicente</strong>, Director of Neighborhood Kids at Delray. She is the highest-performing, lowest-turnover director in the network, with a waiting list. A believer who leads with compassion and conviction, tough on her teachers but trusted, and she understands the financial weight of full enrollment. The takeaway: the director is vital, but Delray works because every factor aligned at once, the right director, an evangelistic pastor who embraced the partnership, a make-ready licensed facility, and a market that supports it. Mike noted the campus is small (about 90 to 93 capacity, below the 100-plus target) yet thrives for exactly that reason. Delray also happens to sit separate from the church with no weekly flip of space, but that is the exception. The great majority of churches will flip shared space week to week, so we should not expect dedicated, separate facilities.</p>
+    </div>
+
+    <div class="finding">
+      <h3>Golden example two: the Retrofit model, still to be named</h3>
+      <p>The <strong>Retrofit model</strong> is not new construction; NKS does not build facilities. NKS retrofits a church's existing, underused weekday space, space that sits empty during the week or is used for something of lesser intensity like a Mother's Day Out program, into an NKS-branded and operated weekday preschool, for a church that does not currently run a five-day day school. We do not yet have an agreed golden example of a thriving Retrofit campus. This matters because the two models are sold and timed very differently: a Rebrand can open in as little as 90 days, while a Retrofit runs closer to nine months and asks more of the church up front. Naming NKS's best Retrofit campus, or defining what it should look like, is an open item for the next call so AUDIA Consulting can target both models with a real proof point. See Part B, Section 8.</p>
+    </div>
+
+    <div class="finding">
+      <h3>Leadership is the multiplier, but no single factor carries a campus</h3>
+      <p>The center director is vital, a believer who is also a strong leader, and Brian's read from the field is that more than almost anything else, everything rises and falls on leadership. But it is not accurate to say a campus begins and ends with the director. Delray succeeds because several things were true at once: a strong director (Enma Vicente), an evangelistic pastor and leadership team who embraced the partnership, a make-ready facility, and a market with the density and demographics to fill the school. NKS is unlikely to win without all of them together.</p>
+      <p>On the director specifically: when NKS rebrands an existing school, the priority is to <strong>keep as much of the existing staff as possible</strong> for parent continuity, but everyone is qualified through a quick interview to confirm they are on mission. Jenn can read within five to ten minutes whether a director will succeed, then the operations launch team takes over the actual decision. Jenn has not yet run this process inside NKS, so the formal evaluation cadence is still being established.</p>
+    </div>
+
+    <div class="finding">
+      <h3>What kills a deal, the four mistakes</h3>
+      <ul>
+        <li><strong>Underestimating the church's cost to get ready.</strong> One church was quoted around $500,000; the enthusiastic executive pastor left and surprises (a county-required turn lane and driveway rebuild, a bad land-use firm) pushed it to 3x. NKS now gives a sober, realistic cost estimate for the church to bid out with its own contractors. Enthusiasm over process is the danger.</li>
+        <li><strong>Choosing the wrong church.</strong> You cannot exit the contract, and a bad campus becomes a bad reference. Delray's pastor is now Frank's number-one reference call.</li>
+        <li><strong>Relationship over fit (Jenn).</strong> The classic trap: a great pastor connection and lots of excitement, but the market will not fill the classrooms or the building cannot be licensed without unfunded capital. Months later someone has to say no. Bring NKS a fit, not just a relationship.</li>
+        <li><strong>A partner dishonoring the brand (Mike).</strong> For AUDIA Consulting specifically, the biggest risk is overpromising, under-delivering, or anything that damages NKS's reputation. The vetting and cost work is NKS's job once a church is engaged; AUDIA Consulting's job is to protect the relationship and not overspeak.</li>
+      </ul>
+      <p>Brian's Lionheart experience confirmed all of this: relationship-sourced churches that could not be delivered, because the slice that actually fit was tiny. The frequent obstructionists were the existing school's teachers (for example a Mother's Day Out or three-day program where teachers only wanted three days), not the pastoral team.</p>
+    </div>
+
+    <div class="finding">
+      <h3>Partnership mindset and pastor reorientation</h3>
+      <p>Pastors instinctively think about three things: cash (how much can we make), disruption (to staff and facilities), and how turnkey it is. The job is to <strong>reorient them</strong> to the Great Commission, this is why they went into ministry, and to position NKS as a partner that helps grow the church. NKS is a ministry and extension of the church, not just a preschool, and the branding honors the host church rather than stamping Neighborhood Kids everywhere. The ideal is an on-fire church that wraps its arms around the school, but Mike was clear that a busy, non-obstructionist church that lets NKS run the school and prays with the kids can still be a great campus. Do not over-invest in redirecting a church that simply will not engage strategically.</p>
+    </div>
+
+    <div class="finding">
+      <h3>The internal champion model</h3>
+      <p>NKS's current approach is to <strong>stipend the church's existing kids or children's director $500 to $1,000 a month</strong> to serve as liaison. That person is already in the building and motivated, so it honors their time, builds a communication bridge, lets NKS learn the church's DNA, and helps NKS integrate with the church rather than forcing the church into NKS brand guidelines. This replaces the older Lionheart model of funding a brand-new church-hired liaison, which Brian saw fail in practice because the role drifted into school operations instead of strategic outreach. Even when funded, only about three of the first ten churches used it strategically.</p>
+    </div>
+
+    <div class="finding">
+      <h3>Construction, buildout, and win metrics</h3>
+      <p><strong>Construction is the church's responsibility for now.</strong> NKS walks the church through it and can offer vetted national vendors (for example Building God's Way). The biggest single cost is usually the playground; NKS has national playground vendors who deliver, warranty, and guarantee the work, and Jenn gives design and floor-plan input, which is especially helpful when a church is mid-building-campaign. A future NKS development department may bring more of this in-house.</p>
+      <p><strong>Win metrics.</strong> Year one should be north of 70 percent capacity (above 20 percent within the first six months of opening), with enrollment trending up rather than dipping and stabilized leadership; roughly half of opening staff may turn over in year one, which is normal and fixable. By year two to three the target is 80 to 85 percent plus. As Mike put it, after year one the campus should be humming.</p>
+    </div>
+
+    <div class="finding">
+      <h3>Relationship and handoff</h3>
+      <p>The handoff sequence is: AUDIA Consulting introduces the pastor to <strong>Frank first to honor the pastor's influence</strong>, Jenn works the demographic and vetting in the background, and Mike picks up the relationship from there. A hiccup taught the lesson: when a pastor's text was not routed to Frank quickly, it stalled because the pastor wanted Frank first. Both Brian and Frank agree the long-term goal is to transition the relationship to NKS as fast as is healthy. Frank is willing to travel for relationship building rather than keeping everything virtual.</p>
+    </div>
+
+    <!-- ============ PART B ============ -->
+    <div class="part-banner">
+      <div class="part-kicker">Part B</div>
+      <h2>Open Questions for June 16</h2>
+      <p>Only what is still unanswered, ordered to lead with what Frank and Mike can settle. Answered questions from the agenda have been removed.</p>
+    </div>
+
+    <div class="section-title"><span class="num">1.</span>Economics and Who Funds What <span class="pill pill-priority">Priority</span></div>
+
+    <div class="clause">
+      <h3>The money mechanics <span class="tag tag-mike">Mike</span> <span class="tag tag-frank">Frank</span></h3>
+      <ol>
+        <li>Can we walk through exactly who pays for what on a typical deal: church-funded buildout and playground versus anything NKS funds? Delray was about $20,000 because it was licensed, and you referenced roughly ten times that for a non-licensed building. What is the realistic all-in range a church should plan for today?</li>
+        <li>The investor materials describe a revenue share of about 8 percent of top-line back to the church. How do you want me to present that to a pastor as the church's financial upside, and what does it look like in real dollars at a mature campus around $2 million in revenue?</li>
+        <li>After the lesson on underestimating cost, how do you now frame the cost estimate to a church, and how should I set expectations upfront so a pastor is never surprised the way that earlier executive pastor was?</li>
+        <li>How can I tactfully read a church's capital capacity early, and what financial situations (debt load, an active building campaign, declining giving) should make me cautious even with strong mission fit?</li>
+      </ol>
+    </div>
+
+    <div class="section-title"><span class="num">2.</span>The CBRE Screen and Target Markets <span class="pill pill-priority">Priority</span></div>
+
+    <div class="clause">
+      <h3>Pre-qualifying before I spend a relationship <span class="tag tag-mike">Mike</span> <span class="tag tag-frank">Frank</span></h3>
+      <ol>
+        <li>Can we run this in reverse? Rather than vet churches one at a time after I find them, can we use the CBRE tool to scan a target market up front and produce a shortlist, say the 25 churches in a metro that already fit the demographic and capacity profile, so I am only ever reaching out to pre-qualified targets? Have you already built this, or have we been approaching it backwards?</li>
+        <li>What does the CBRE demographic tool actually screen for, and can you share the pass or fail thresholds so I can pre-qualify a church before I bring it to you?</li>
+        <li>When the target-markets list comes over, how should I weight it against a strong relationship I can open a door with in a market that is not at the top of the list?</li>
+        <li>Beyond affluent suburbs and household income, what demographic signals matter most for filling classrooms?</li>
+        <li>Which markets are hard enough on cost, licensing, or saturation (California came up) that I should deprioritize them even with a good church?</li>
+      </ol>
+      <div class="highlight-box"><strong>The idea to pressure-test:</strong> reverse-engineer the pipeline. Use NKS's demographic data to identify the qualified churches in a market before any outreach, so AUDIA Consulting works a pre-screened target list of the best 20 to 25 fits rather than vetting churches one at a time after the fact.</div>
+    </div>
+
+    <div class="section-title"><span class="num">3.</span>Targeting Filter, a Statement to Affirm</div>
+
+    <div class="clause">
+      <h3>How AUDIA Consulting will choose targets <span class="tag tag-frank">Frank</span></h3>
+      <p class="lead-in">You hired AUDIA Consulting to find these churches, so I do not need you to assign targets. I will independently pursue churches and pastors that clear the filter below. I just want it confirmed or corrected.</p>
+      <ul>
+        <li><strong>Mentality.</strong> Great Commission-oriented churches within orthodox Christianity, primarily the Evangelical umbrella, but also mainline denominations where the leadership is strong.</li>
+        <li><strong>Influence.</strong> Influential churches and pastors whose name and reach can open a network.</li>
+        <li><strong>Space.</strong> The facility to support a 100-plus-capacity NKS campus.</li>
+        <li><strong>Markets.</strong> The right childcare markets, with the density and demographics to fill a school.</li>
+        <li><strong>What else?</strong> What would you add to this filter, and is there any denomination, theological position, or church culture that is off-limits or a poor fit so I steer clear?</li>
+      </ul>
+    </div>
+
+    <div class="section-title"><span class="num">4.</span>Facility and Site Specifics</div>
+
+    <div class="clause">
+      <h3>The walkthrough checklist <span class="tag tag-mike">Mike</span> <span class="pill pill-jenn">Jenn goes deepest</span></h3>
+      <ol>
+        <li>For a 100-plus-capacity campus, what is the rough square footage and classroom math, and what is the outdoor and playground minimum?</li>
+        <li>Since more than ninety-five percent of churches will flip space rather than dedicate it, the weekday NKS preschool reverts to the church on weekends. In that shared-use arrangement, what becomes NKS-controlled or off-limits to the church (locked classrooms, the director's office, secured supplies), so I can set the right expectation with a pastor?</li>
+        <li>Help me sort facility issues into <strong>absolute deal killers</strong> versus things that can be worked around or built into the business model. For example, I have seen a lack of sprinklers kill one deal, yet at another church the leadership said they wanted to update that anyway and we built it into the plan. From your experience, what is genuinely non-negotiable for our model, and what is negotiable?</li>
+      </ol>
+    </div>
+
+    <div class="section-title"><span class="num">5.</span>Director Recruitability as a Screen</div>
+
+    <div class="clause">
+      <h3>A statement to affirm, not a deep dive <span class="tag tag-mike">Mike</span> <span class="tag tag-frank">Frank</span></h3>
+      <p class="lead-in">We do not think this needs to be a separate screen. I just want this confirmed or corrected.</p>
+      <ol>
+        <li>Our working assumption: director recruitability is essentially a function of market size. In a market large enough to clear the demographic and capacity bar, we can recruit a strong director, so AUDIA Consulting will not treat recruitability as an additional filter beyond market size. Agree?</li>
+      </ol>
+    </div>
+
+    <div class="section-title"><span class="num">6.</span>Process and the Perfect Handoff <span class="pill pill-priority">Priority</span></div>
+
+    <div class="clause">
+      <h3>Define your ideal handoff <span class="tag tag-frank">Frank</span> <span class="tag tag-mike">Mike</span></h3>
+      <p class="lead-in">This is one of the most important things for me to get right, so I want it in your words.</p>
+      <ol>
+        <li>Paint me the perfect handoff. From the moment I introduce a pastor, what is the ideal process and methodology end to end: who does what, in what order, how fast, and what does a flawless transition feel like to you?</li>
+        <li>At what point does Jenn's vetting formally begin, and how do we keep the pastor's relationship warm through the transition so nothing stalls the way that earlier text exchange did?</li>
+        <li>What information do you most want from me at handoff so your team can move fast and look prepared?</li>
+        <li>How many strong introductions can your team realistically absorb at once right now, and what communication cadence do you want with me between churches?</li>
+      </ol>
+      <div class="highlight-box"><strong>What I want to walk away with:</strong> your definition of the perfect handoff, so every introduction I make follows the exact process that sets you up to win.</div>
+    </div>
+
+    <div class="section-title"><span class="num">7.</span>Priorities and First Moves <span class="pill pill-priority">Priority</span></div>
+
+    <div class="clause">
+      <h3>Our recommendation, and a chance to redirect <span class="tag tag-frank">Frank</span> <span class="tag tag-mike">Mike</span></h3>
+      <p class="lead-in">Here is how AUDIA Consulting proposes to start. Confirm it or point us somewhere better.</p>
+      <ol>
+        <li>We recommend concentrating on one market first and going deep on a tight cluster of churches, even within a micro-market inside that metro, rather than scattering. Do you agree that is the right opening move?</li>
+        <li>We are leaning toward Texas as the starting market, but our relationships are nationwide, so we can focus almost anywhere. Do you have a market you would rather we open in first?</li>
+        <li>Is there a profile or market you want us to actively avoid right now, even a good church, because the timing or fit is wrong for this phase?</li>
+      </ol>
+    </div>
+
+    <div class="section-title"><span class="num">8.</span>The Retrofit Golden Example, Still Missing <span class="pill pill-priority">Priority</span></div>
+
+    <div class="clause">
+      <h3>We have the Rebrand example, do we have a Retrofit one? <span class="tag tag-frank">Frank</span> <span class="tag tag-mike">Mike</span></h3>
+      <p class="lead-in">First Baptist Delray is our golden example for the Rebrand model, assuming operations of an existing day school. I want the matching proof point for the Retrofit model, renovating unused or low-intensity church space into an NKS-branded preschool.</p>
+      <ol>
+        <li>What is your best example of a church that did <em>not</em> have an existing five-day day school, where NKS retrofitted unused or lesser-use space (for example a Mother's Day Out room) into an NKS-branded preschool that is now working well? Who is it, and what made it work?</li>
+        <li>If we do not have a clear one yet, what would the ideal Retrofit golden example look like, so I know exactly what I am hunting for?</li>
+        <li>How differently should I target and pitch a Retrofit church (roughly nine months to open) versus a Rebrand (as fast as 90 days), and which model do you want more of right now?</li>
+      </ol>
+    </div>
+
+    <div class="section-title"><span class="num">9.</span>Open Floor and What I Have Not Asked</div>
+
+    <div class="clause">
+      <h3>Context and the catch-all <span class="tag tag-all">All</span></h3>
+      <ol>
+        <li>What else do you need me to know to represent NKS well that we have not covered yet?</li>
+        <li>How do you want me to talk about NKS when I am opening a door, and is there anything you do not want me to say or promise on your behalf?</li>
+      </ol>
+      <div class="highlight-box"><strong>The most important question:</strong> What have I not asked that I should have? If you were in my seat trying to find the next ten golden-example churches, what would you want to know that we have not covered?</div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 AUDIA Consulting and Neighborhood Kids Schools. Working target profile and open questions for the Strategic Church Referral Partnership. Updated June 15, 2026.</p>
+  </footer>
+</body>
+</html>
